@@ -1,7 +1,5 @@
 package com.yunque.www.springbootdemo.design.observer;
 
-import android.util.Log;
-
 import java.util.Observable;
 
 /**
@@ -15,6 +13,6 @@ import java.util.Observable;
 public class Customer2 implements BaseObserver {
     @Override
     public void update(Observable o, Object arg) {
-        Log.i(TAG, arg.toString());
+//        Log.i(TAG, arg.toString());
     }
 }

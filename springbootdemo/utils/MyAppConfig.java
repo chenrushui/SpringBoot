@@ -1,6 +1,6 @@
 package com.yunque.www.springbootdemo.utils;
 
-import com.yunque.www.springbootdemo.service.HelloService;
+import com.yunque.www.springbootdemo.service.serviceimpl.HelloServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,7 +13,7 @@ public class MyAppConfig {
      * @return
      */
     @Bean
-    public HelloService helloService() {
-        return new HelloService();
+    public HelloServiceImpl helloService() {
+        return new HelloServiceImpl();
     }
 }

@@ -1,10 +1,11 @@
-package com.yunque.www.springbootdemo.service;
+package com.yunque.www.springbootdemo.service.serviceimpl;
 
+import com.yunque.www.springbootdemo.service.IHelloService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 
-public class HelloService implements IHelloService {
+public class HelloServiceImpl implements IHelloService {
 
     /**
      * 开启注解式事务
