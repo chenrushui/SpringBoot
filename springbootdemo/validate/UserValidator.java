@@ -1,4 +1,4 @@
-package com.yunque.www.springbootdemo.Validate;
+package com.yunque.www.springbootdemo.validate;
 
 import com.yunque.www.springbootdemo.pojo.User;
 

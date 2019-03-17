@@ -1,8 +1,8 @@
 package com.yunque.www.springbootdemo.aop;
 
 
-import com.yunque.www.springbootdemo.Validate.UserValidator;
-import com.yunque.www.springbootdemo.Validate.UserValidatorImpl;
+import com.yunque.www.springbootdemo.validate.UserValidator;
+import com.yunque.www.springbootdemo.validate.UserValidatorImpl;
 import com.yunque.www.springbootdemo.pojo.User;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
