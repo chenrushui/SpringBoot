@@ -18,7 +18,7 @@ public class BaseBean<T> implements Serializable {
     public static final int NO_PERMISSION = 2;
 
     private String message;
-    private int code;
+    private String code;
     private T data;
 
 }
