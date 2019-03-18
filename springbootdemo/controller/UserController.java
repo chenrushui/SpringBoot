@@ -2,10 +2,14 @@ package com.yunque.www.springbootdemo.controller;
 
 import com.yunque.www.springbootdemo.pojo.BaseResult;
 import com.yunque.www.springbootdemo.pojo.User;
+import com.yunque.www.springbootdemo.service.IUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
@@ -15,6 +19,12 @@ import javax.servlet.http.HttpServletRequest;
 @Api(value = "/user", description = "用户类API")
 @RestController
 public class UserController {
+
+    @Autowired
+    IUserService iUserService;
+
+
+    private Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @ApiOperation(value = "用户登录接口")
     @ApiImplicitParams({
@@ -78,6 +88,7 @@ public class UserController {
         return baseResult;
     }
 
+    //http://localhost:9000/add/test
     @ApiIgnore
     //todo：如何去掉空的null？使用注解解决
     //@RequestParam
@@ -92,15 +103,23 @@ public class UserController {
         baseResult.setResult(user);
         baseResult.setCode(200);
         baseResult.setMessage("请求成功");
+        logger.info(baseResult.toString());
         return baseResult;
     }
-
-
 
     @PostMapping(value = "/post")
     public BaseResult addUserPost(@RequestBody User user) {
         return new BaseResult();
     }
 
+    //http://localhost:9000/user/get
+    @GetMapping(value = "/user/get")
+    public BaseResult getUserInfo(){
+        User user = new User();
+        User u = iUserService.printUser(user);
+        BaseResult baseResult = new BaseResult();
+        baseResult.setResult(u.getName());
+        return baseResult;
+    }
 
 }

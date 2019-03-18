@@ -11,6 +11,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import javax.servlet.http.HttpServletRequest;
@@ -22,6 +23,7 @@ import java.util.Map;
  * author:crs
  * Description:自定义异常处理器
  */
+//@ControllerAdvice(annotations = RestController.class)
 @ControllerAdvice
 public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
     private Logger logger = LoggerFactory.getLogger(CustomExceptionHandler.class);
@@ -74,6 +76,4 @@ public class CustomExceptionHandler extends ResponseEntityExceptionHandler {
         //调用Logger系统的error()方法
         this.logger.error(JSONObject.toJSONString(map), ex);
     }
-
-
 }

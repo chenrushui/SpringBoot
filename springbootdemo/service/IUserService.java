@@ -7,5 +7,5 @@ public interface IUserService {
      * 打印用户信息
      * @param use
      */
-    void printUser(User use);
+    User printUser(User use);
 }

@@ -20,10 +20,8 @@ public class MyAspect {
     @DeclareParents(value = "com.yunque.www.springbootdemo.service.serviceimpl.UserServiceImpl", defaultImpl = UserValidatorImpl.class)
     public UserValidator userValidator;
 
-
     @Pointcut("execution(* com.yunque.www.springbootdemo.service.serviceimpl.UserServiceImpl.*(..))")
     public void pointCut() {
-
     }
 
     @Before("pointCut()&&args(user)")
@@ -49,7 +47,6 @@ public class MyAspect {
     @AfterReturning("pointCut()")
     public void afterReturning() {
         System.out.println("afterReturning");
-
     }
 
     @AfterThrowing("pointCut()")

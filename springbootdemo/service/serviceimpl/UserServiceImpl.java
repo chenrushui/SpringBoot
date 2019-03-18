@@ -8,11 +8,13 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements IUserService {
 
     @Override
-    public void printUser(User user) {
-        if (user == null) {
-            throw new RuntimeException("参数为空！");
-        }
+    public User printUser(User user) {
+
+//        if (user == null) {
+//            throw new RuntimeException("参数为空！");
+//        }
         System.out.println("用户名：---->" + user.getName());
         System.out.println("用户名：---->" + user.getPassword());
+        return null;
     }
 }
