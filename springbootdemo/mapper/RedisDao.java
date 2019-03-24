@@ -1,4 +1,4 @@
-package com.yunque.www.springbootdemo.dao;
+package com.yunque.www.springbootdemo.mapper;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

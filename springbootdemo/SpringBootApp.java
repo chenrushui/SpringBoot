@@ -1,11 +1,15 @@
 package com.yunque.www.springbootdemo;
 
 import com.yunque.www.springbootdemo.aop.MyAspect;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 //@ImportResource(locations = {"classpath:bean.xml"})
+//@EnableRabbit
+@MapperScan(basePackages = "com.yunque.www.springbootdemo.mapper")
 @SpringBootApplication(scanBasePackages = "com.yunque.www")
 public class SpringBootApp {
 
@@ -15,10 +19,11 @@ public class SpringBootApp {
 
     /**
      * 如果不注入到容器中，就不能发挥作用
+     *
      * @return
      */
-    @Bean(name="myAspect")
-    public MyAspect getMyAspect(){
+    @Bean(name = "myAspect")
+    public MyAspect getMyAspect() {
         return new MyAspect();
     }
 }
