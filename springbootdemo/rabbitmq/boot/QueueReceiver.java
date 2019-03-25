@@ -11,9 +11,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class QueueReceiver {
 
-    @RabbitListener(queues = "springboot")
-    public void processMessage(String str) {
-        System.out.println(str);
-    }
+//    @RabbitListener(queues = "springboot")
+//    public void processMessage(String str) {
+//        System.out.println(str);
+//    }
 
 }

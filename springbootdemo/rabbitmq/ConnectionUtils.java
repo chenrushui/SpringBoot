@@ -30,7 +30,8 @@ public class ConnectionUtils {
         factory.setUsername("guest");
         factory.setHost("192.168.140.88");
         factory.setPort(5672);
-        return factory.newConnection();
+        //return factory.newConnection();
+        return null;
     }
 
 
