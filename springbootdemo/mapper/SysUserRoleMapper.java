@@ -7,4 +7,6 @@ public interface SysUserRoleMapper {
     int insert(SysUserRoleBean record);
 
     int insertSelective(SysUserRoleBean record);
+
+    SysUserRoleBean selectUserRoleById(Long id);
 }

@@ -1,6 +1,8 @@
 package com.yunque.www.springbootdemo.service;
 
-import com.yunque.www.springbootdemo.pojo.SysUser;
+
+import com.yunque.www.springbootdemo.pojo.SysUserBean;
+import com.yunque.www.springbootdemo.pojo.SysUserRoleJoinBean;
 
 /**
  * Created on 2019/3/25.
@@ -9,5 +11,24 @@ import com.yunque.www.springbootdemo.pojo.SysUser;
  */
 public interface ISysUserService {
 
-    SysUser selectSysUserById(Long id);
+    /**
+     * 通过id获取用户信息
+     * @param id
+     * @return
+     */
+    SysUserBean selectSysUserById(Long id);
+
+    /**
+     * 通过id获取用户信息以及角色信息
+     * @param id
+     * @return
+     */
+    SysUserBean selectSysUserRoleById(Long id);
+
+    /**
+     * 通过id获取用户信息以及角色信息
+     * @param id
+     * @return
+     */
+    SysUserRoleJoinBean selectSysUserRoleJoinById(Long id);
 }
