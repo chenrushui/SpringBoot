@@ -1,17 +1,18 @@
 package com.yunque.www.springbootdemo.mapper;
 
-import com.yunque.www.springbootdemo.pojo.SysRole;
+
+import com.yunque.www.springbootdemo.pojo.SysRoleBean;
 
 public interface SysRoleMapper {
     int deleteByPrimaryKey(Long id);
 
-    int insert(SysRole record);
+    int insert(SysRoleBean record);
 
-    int insertSelective(SysRole record);
+    int insertSelective(SysRoleBean record);
 
-    SysRole selectByPrimaryKey(Long id);
+    SysRoleBean selectByPrimaryKey(Long id);
 
-    int updateByPrimaryKeySelective(SysRole record);
+    int updateByPrimaryKeySelective(SysRoleBean record);
 
-    int updateByPrimaryKey(SysRole record);
+    int updateByPrimaryKey(SysRoleBean record);
 }

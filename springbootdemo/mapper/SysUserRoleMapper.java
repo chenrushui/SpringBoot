@@ -1,9 +1,10 @@
 package com.yunque.www.springbootdemo.mapper;
 
-import com.yunque.www.springbootdemo.pojo.SysUserRole;
+
+import com.yunque.www.springbootdemo.pojo.SysUserRoleBean;
 
 public interface SysUserRoleMapper {
-    int insert(SysUserRole record);
+    int insert(SysUserRoleBean record);
 
-    int insertSelective(SysUserRole record);
+    int insertSelective(SysUserRoleBean record);
 }

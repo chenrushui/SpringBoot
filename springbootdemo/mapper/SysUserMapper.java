@@ -1,19 +1,17 @@
 package com.yunque.www.springbootdemo.mapper;
 
-import com.yunque.www.springbootdemo.pojo.SysUser;
-import org.apache.ibatis.annotations.Mapper;
+import com.yunque.www.springbootdemo.pojo.SysUserBean;
 
-@Mapper
 public interface SysUserMapper {
     int deleteByPrimaryKey(Long id);
 
-    int insert(SysUser record);
+    int insert(SysUserBean record);
 
-    int insertSelective(SysUser record);
+    int insertSelective(SysUserBean record);
 
-    SysUser selectByPrimaryKey(Long id);
+    SysUserBean selectByPrimaryKey(Long id);
 
-    int updateByPrimaryKeySelective(SysUser record);
+    int updateByPrimaryKeySelective(SysUserBean record);
 
-    int updateByPrimaryKey(SysUser record);
+    int updateByPrimaryKey(SysUserBean record);
 }

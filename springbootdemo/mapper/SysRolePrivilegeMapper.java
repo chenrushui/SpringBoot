@@ -1,9 +1,10 @@
 package com.yunque.www.springbootdemo.mapper;
 
-import com.yunque.www.springbootdemo.pojo.SysRolePrivilege;
+
+import com.yunque.www.springbootdemo.pojo.SysRolePrivilegeBean;
 
 public interface SysRolePrivilegeMapper {
-    int insert(SysRolePrivilege record);
+    int insert(SysRolePrivilegeBean record);
 
-    int insertSelective(SysRolePrivilege record);
+    int insertSelective(SysRolePrivilegeBean record);
 }

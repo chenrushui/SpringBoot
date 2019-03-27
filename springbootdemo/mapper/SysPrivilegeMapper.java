@@ -1,17 +1,18 @@
 package com.yunque.www.springbootdemo.mapper;
 
-import com.yunque.www.springbootdemo.pojo.SysPrivilege;
+
+import com.yunque.www.springbootdemo.pojo.SysPrivilegeBean;
 
 public interface SysPrivilegeMapper {
     int deleteByPrimaryKey(Long id);
 
-    int insert(SysPrivilege record);
+    int insert(SysPrivilegeBean record);
 
-    int insertSelective(SysPrivilege record);
+    int insertSelective(SysPrivilegeBean record);
 
-    SysPrivilege selectByPrimaryKey(Long id);
+    SysPrivilegeBean selectByPrimaryKey(Long id);
 
-    int updateByPrimaryKeySelective(SysPrivilege record);
+    int updateByPrimaryKeySelective(SysPrivilegeBean record);
 
-    int updateByPrimaryKey(SysPrivilege record);
+    int updateByPrimaryKey(SysPrivilegeBean record);
 }

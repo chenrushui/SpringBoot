@@ -1,9 +1,8 @@
 package com.yunque.www.springbootdemo.pojo;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class SysUser implements Serializable {
+public class SysUserBean {
     private Long id;
 
     private String userName;
@@ -13,20 +12,6 @@ public class SysUser implements Serializable {
     private String userEmail;
 
     private Date createTime;
-
-    private static final long serialVersionUID = 1L;
-
-    public SysUser(Long id, String userName, String userPassword, String userEmail, Date createTime) {
-        this.id = id;
-        this.userName = userName;
-        this.userPassword = userPassword;
-        this.userEmail = userEmail;
-        this.createTime = createTime;
-    }
-
-    public SysUser() {
-        super();
-    }
 
     public Long getId() {
         return id;
@@ -66,21 +51,5 @@ public class SysUser implements Serializable {
 
     public void setCreateTime(Date createTime) {
         this.createTime = createTime;
-    }
-
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", userName=").append(userName);
-        sb.append(", userPassword=").append(userPassword);
-        sb.append(", userEmail=").append(userEmail);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", serialVersionUID=").append(serialVersionUID);
-        sb.append("]");
-        return sb.toString();
     }
 }
